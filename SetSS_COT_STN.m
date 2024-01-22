@@ -81,12 +81,3 @@ Regression.cutoff = 6;
 Plot.gkern = 0.05;
 
 save([savedir 'SS.mat']);
-
-
-% MISSING FILE NOTES
-% VM01 and VM04 were dystonic tremor and are bad / weird. Don't use
-% VM11 has no units, also only 1 session
-% VM13 was aborted due to shoulder pain
-% VM15 behavior was essentially unusable
-% VM24 didn't happen
-% VM25_2 has bad anipose
