@@ -9,35 +9,38 @@ This readme walks through the steps of preprocessing for center-out task DBS dat
 
 The code relies on several environmental variables to set your working directories. Set these and then restart MATLAB before running.
 
-'SYNOLOGYDIR': The path to the "CenterOutTask" folder in the rsrch5 synology drive ( something like '\\som-nsg-rsrch5.ucdenver.pvt\documents\CenterOutTask')
+	'SYNOLOGYDIR': The path to the "CenterOutTask" folder in the rsrch5 synology drive ( something like '\\som-nsg-rsrch5.ucdenver.pvt\documents\CenterOutTask')
 
-'DBSDATADIR': The path to your general dbs data folder. Each subject will get a subfolder in this directory with the raw data files.
+	'DBSDATADIR': The path to your general dbs data folder. Each subject will get a subfolder in this directory with the raw data files.
 
-'AOCONVERTERDIR': The path to your install of the AlphaOmega mpx file converter software (something like 'C:\Program Files (x86)\AlphaOmega\Converter')
+	'AOCONVERTERDIR': The path to your install of the AlphaOmega mpx file converter software (something like 'C:\Program Files (x86)\AlphaOmega\Converter')
 
-'ANACONDAPYDIR': The path to your anaconda python install (something like 'C:\Users\username\anaconda3\envs\DEEPLABCUT\python.exe')
+	'ANACONDAPYDIR': The path to your anaconda python install (something like 'C:\Users\username\anaconda3\envs\DEEPLABCUT\python.exe')
 
-'PLXSDKDIR': (OPTIONAL) The path to where you downloaded the Plexon MATLAB offline SDK (optional, if you want to do hand-sorting in plexon)
+	'PLXSDKDIR': (OPTIONAL) The path to where you downloaded the Plexon MATLAB offline SDK (optional, if you want to do hand-sorting in plexon)
 
-'PLXDIR': (OPTIONAL) The path to where you want to save the plx files, where you will do sorting
+	'PLXDIR': (OPTIONAL) The path to where you want to save the plx files, where you will do sorting
 
-'DLCDIR': The path to where your DLC projects are stored
+	'DLCDIR': The path to where your DLC projects are stored
 
 
 It also requires the following outside packages:
 
-AlphaOmega MPX file converter. Windows x64 installer is included in this repo
+	AlphaOmega MPX file converter. Windows x64 installer is included in this repo
 
-DeepLabCut, installed with Anaconda. Installation instructions here: https://deeplabcut.github.io/DeepLabCut/docs/installation.html
+	DeepLabCut, installed with Anaconda. Installation instructions here: https://deeplabcut.github.io/DeepLabCut/docs/installation.html
 
-Plexon SDK (if you want to do Plexon OfflineSorter sorting. Can be found here: https://plexon.com/software-downloads/#software-downloads-SDKs). Download the MATLAB Offline Files SDK.zip, add it to your MATLAB path)
+	Plexon SDK (if you want to do Plexon OfflineSorter sorting. Can be found here: https://plexon.com/software-downloads/#software-downloads-SDKs). Download the MATLAB Offline Files SDK.zip, add it to your MATLAB path)
 
 
 And requires the following files in your 'DBSDATADIR' directory (files have been provided here, move them to DBSDATADIR:
 
-COT_CamAlign_Fixes.xlsx
+	COT_CamAlign_Fixes.xlsx
 
-COT_ReachFind_Fixes.xlsx
+	COT_ReachFind_Fixes.xlsx
+
+
+CODE EXECUTION STEPS:
 
 
 1. Run PullAndPrep: this creates the subject folder in 'DBSDATADIR' and does initial Preprocessing. It runs the following subroutines:
